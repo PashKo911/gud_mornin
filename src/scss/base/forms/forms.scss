@@ -1,0 +1,113 @@
+//<FORM>
+// Сніппет (HTML):
+.form {
+	&__row {
+		position: relative;
+		z-index: 3;
+	}
+	&__column {
+	}
+	&__line {
+	}
+	&__input {
+	}
+	&__button {
+	}
+	&__error {
+		color: red;
+		font-size: toRem(12);
+		position: absolute;
+		bottom: 0;
+		left: 5%;
+		transform: translate(0, 105%);
+	}
+}
+// Cтилі для вікна статусу відправки повідомлення застосовував для відправки в телеграм
+/*
+.form-message-wrapper {
+	position: absolute;
+	z-index: 3;
+	top: 50%;
+	left: 50%;
+	border-radius: toRem(20);
+	transform: translate(-50%, -50%);
+	width: calc(100% + toRem(2));
+	height: calc(100% + toRem(2));
+	padding: 10%;
+	color: #000;
+	line-height: 1.2;
+	font-size: toRem(20);
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: toRem(2) solid #000;
+	background: rgba(0, 0, 0, 0.6);
+	backdrop-filter: blur(toRem(6));
+	z-index: 50;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
+
+	.ajax-message & {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	span {
+		color: #fff;
+		font-size: toRem(20);
+	}
+	svg {
+		width: 41.666667%; 
+		aspect-ratio: 1;
+		visibility: hidden;
+		opacity: 0;
+		display: none;
+
+		._sending & {
+			display: block;
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+}
+*/
+
+//</FORM>
+
+// <BUTTONS>
+// Сніппет (HTML): btn
+// @import "button";
+
+// <INPUTS>
+// Сніппет (HTML): inp
+// @import "input";
+
+// <CHECK>
+// Сніппет (HTML): chk
+// @import "checkbox";
+
+// <RADIO>
+// Сніппет (HTML): opt
+// @import "radio";
+
+// <SELECT>
+// Сніппет (HTML): sel
+// @import "select";
+
+// <RATING>
+// Сніппет (HTML): rating
+// @import "rating";
+
+// <QUANTITY>
+// Сніппет (HTML): qa
+// @import "quantity";
+
+// <RANGE>
+// Сніппет (HTML):
+// @import "range";
+
+// <CALENDAR>
+// Сніппет (HTML):
+// @import "datepicker";

@@ -1,0 +1,215 @@
+.table {
+	position: relative;
+	z-index: 2;
+	@include adaptiveValue('margin-top', -150, -180, 2, 1920, 991.98);
+	@include adaptiveValue('margin-top', -180, 0, 3, 991.98, 320);
+	// .table__top
+	&__top {
+	}
+	// .table__bottom
+	&__bottom {
+	}
+}
+
+.bottom-block {
+	width: 100%;
+	aspect-ratio: 1489 / 95;
+	background-color: #9e6e46;
+	border-left: 0.416667vw solid #000;
+	border-right: 0.416667vw solid #000;
+	border-bottom: 0.416667vw solid #000;
+	background-color: #624023;
+	width: 77.552083%; /* 1489/1920 */
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	position: relative;
+	z-index: 1;
+}
+
+.top-table {
+	// position: relative;
+	z-index: 1;
+
+	// .top-table__wrp
+	&__wrp {
+		padding-bottom: toRem(40);
+		width: 77.552083%; /* 1489/1920 */
+		margin: 0 auto;
+		background-color: #9e6e46;
+		border-left: 0.416667vw solid #000;
+		border-right: 0.416667vw solid #000;
+		border-top: 0.416667vw solid #000;
+		border-bottom: 0.416667vw solid #000;
+		border-top-left-radius: toRem(1000);
+		border-top-right-radius: toRem(1000);
+	}
+
+	// .top-table__decor-wrp
+	&__decor-wrp {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		// top: 5.2%;
+		top: 17vw;
+		left: 0%;
+		z-index: 3;
+		pointer-events: none;
+	}
+
+	// .top-table__navigate
+	&__navigate {
+	}
+
+	// .top-table__left-dec
+	&__left-dec {
+		width: 10.833333%; /* 208/1920 */
+		aspect-ratio: 208 / 5065;
+		position: absolute;
+		max-width: toRem(208);
+		top: 0%;
+		left: 0%;
+		background: url('../img/page-dec-left.png') center / cover no-repeat;
+		z-index: 2;
+	}
+	// .top-table__right-dec
+	&__right-dec {
+		width: 10.833333%; /* 208/1920 */
+		top: 0%;
+		position: absolute;
+		right: 0%;
+		aspect-ratio: 208 / 5098;
+		max-width: toRem(208);
+		background: url('../img/page-dec-right.png') center / cover no-repeat;
+		z-index: 2;
+	}
+}
+
+.social-link {
+	flex-shrink: 0;
+	aspect-ratio: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	filter: drop-shadow(0 toEm(11, 42) 0 #000);
+	transition:
+		filter 0.2s,
+		transform 0.2s;
+	will-change: filter, transform;
+	@include adaptiveValue('width', 120, 60, 2, 1920, 991.98);
+	@include adaptiveValue('width', 80, 50, 3, 991.98, 320);
+
+	@media (any-hover: hover) {
+		&:hover {
+			filter: drop-shadow(0 0 0 #000);
+			transform: translate(0, toEm(11, 42));
+		}
+		&:hover svg {
+			transform: scale(1.2);
+		}
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0%;
+		left: 0%;
+	}
+
+	// .social-link--dt
+	&--tg {
+		background: url('../img/navigate/tg-bg.png') center / contain no-repeat;
+		svg {
+			aspect-ratio: 43 / 35;
+			width: 35.833333%; /* 43/120 */
+		}
+	}
+	// .social-link--x
+	&--x {
+		background: url('../img/navigate/x-dec.png') center / contain no-repeat;
+		svg {
+			aspect-ratio: 38 / 34;
+			width: 31.666667%; /* 38/120 */
+		}
+	}
+	// .social-link--ds
+	&--ds {
+		background: url('../img/navigate/dexscreen-bg.png') center / contain no-repeat;
+		svg {
+			aspect-ratio: 59 / 66;
+			width: 49.166667%; /* 59/120 */
+		}
+	}
+	// .social-link--dt
+	&--dt {
+		background: url('../img/navigate/dextool-bg.png') center / contain no-repeat;
+		svg {
+			aspect-ratio: 52 / 51;
+			width: 43.333333%; /* 52/120 */
+		}
+	}
+
+	svg {
+		position: relative;
+		z-index: 1;
+		transition: transform 0.2s;
+		will-change: transform;
+	}
+}
+
+.bottom-table {
+	// .bottom-table__wrapper
+	&__wrapper {
+		width: 77.552083%; /* 1489/1920 */
+		margin: 0 auto;
+		background-color: #9e6e46;
+		border-left: 0.416667vw solid #000;
+		border-right: 0.416667vw solid #000;
+		border-top: 0.416667vw solid #000;
+	}
+	// .bottom-table__buy
+	&__buy {
+	}
+}
+
+.swiper {
+	@media (max-width: $tablet) {
+		overflow: hidden;
+	}
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+
+.swiper-button-prev {
+	position: absolute;
+	bottom: 13%;
+	right: 41%;
+	@media (min-width: $tablet) {
+		display: none;
+	}
+}
+.swiper-button-next {
+	position: absolute;
+	bottom: 12%;
+	right: 19%;
+	@media (min-width: $tablet) {
+		display: none;
+	}
+}
+
+[data-coffee] {
+	animation: coffee 0.2s infinite alternate ease-in;
+}
+
+h1,
+.tokenomics h2 {
+	position: absolute;
+	visibility: hidden;
+	opacity: 0;
+	pointer-events: none;
+}
